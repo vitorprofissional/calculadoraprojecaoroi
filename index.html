@@ -118,55 +118,87 @@
         <!-- Seção de Resumo dos Resultados -->
         <div class="mt-10">
             <h2 class="text-2xl font-semibold text-gray-800 mb-6">Resumo dos Resultados</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Card Pessimista -->
-                <div class="p-6 rounded-2xl shadow-lg border-t-4 border-red-500 bg-white flex flex-col">
-                    <h3 class="text-lg font-bold text-red-800 mb-4">Cenário Pessimista</h3>
-                    <div class="space-y-4 flex-grow">
-                        <div>
-                            <p class="text-sm text-gray-600">Faturamento Bruto</p>
-                            <p id="resumo-faturamento-pessimista" class="text-3xl font-bold text-gray-900">R$ 45.000,00</p>
+                <div class="transform hover:-translate-y-2 transition-transform duration-300 p-6 rounded-2xl shadow-xl bg-gradient-to-br from-red-100 to-red-50 flex flex-col">
+                    <h3 class="text-xl font-bold text-red-900 mb-6">Cenário Pessimista</h3>
+                    <div class="space-y-6 flex-grow">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-red-200 mr-4">
+                                <svg class="w-6 h-6 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 6v-1m0-1V4m0 2v1m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M12 18c-1.657 0-3-.895-3-2s1.343-2 3-2 3-.895 3-2-1.343-2-3-2m0 8v1m0 1v1m0-1c1.11 0 2.08.402 2.599 1"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-sm text-red-800 font-medium">Faturamento Bruto</p>
+                                <p id="resumo-faturamento-pessimista" class="text-3xl font-bold text-red-900">R$ 45.000,00</p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="text-sm text-gray-600">ROI</p>
-                            <p id="resumo-roi-pessimista" class="text-3xl font-bold text-gray-900">1400,0%</p>
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-red-200 mr-4">
+                                 <svg class="w-6 h-6 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-sm text-red-800 font-medium">ROI</p>
+                                <p id="resumo-roi-pessimista" class="text-3xl font-bold text-red-900">1400,0%</p>
+                            </div>
                         </div>
                     </div>
-                    <p class="text-xs text-gray-500 mt-4 pt-4 border-t border-gray-200" id="explainer-pessimista">
+                    <p class="text-sm font-medium text-red-800/90 mt-6 pt-4 border-t border-red-300/50" id="explainer-pessimista">
                         Para cada R$1,00 investido, a empresa obtém R$14,00 de lucro.
                     </p>
                 </div>
+                
                 <!-- Card Realista -->
-                <div class="p-6 rounded-2xl shadow-lg border-t-4 border-yellow-500 bg-white flex flex-col">
-                    <h3 class="text-lg font-bold text-yellow-800 mb-4">Cenário Realista</h3>
-                    <div class="space-y-4 flex-grow">
-                        <div>
-                            <p class="text-sm text-gray-600">Faturamento Bruto</p>
-                            <p id="resumo-faturamento-realista" class="text-3xl font-bold text-gray-900">R$ 75.000,00</p>
+                <div class="transform hover:-translate-y-2 transition-transform duration-300 p-6 rounded-2xl shadow-xl bg-gradient-to-br from-yellow-100 to-yellow-50 flex flex-col">
+                    <h3 class="text-xl font-bold text-yellow-900 mb-6">Cenário Realista</h3>
+                    <div class="space-y-6 flex-grow">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-yellow-200 mr-4">
+                                <svg class="w-6 h-6 text-yellow-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 6v-1m0-1V4m0 2v1m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M12 18c-1.657 0-3-.895-3-2s1.343-2 3-2 3-.895 3-2-1.343-2-3-2m0 8v1m0 1v1m0-1c1.11 0 2.08.402 2.599 1"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-sm text-yellow-800 font-medium">Faturamento Bruto</p>
+                                <p id="resumo-faturamento-realista" class="text-3xl font-bold text-yellow-900">R$ 75.000,00</p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="text-sm text-gray-600">ROI</p>
-                            <p id="resumo-roi-realista" class="text-3xl font-bold text-gray-900">2400,0%</p>
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-yellow-200 mr-4">
+                                 <svg class="w-6 h-6 text-yellow-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-sm text-yellow-800 font-medium">ROI</p>
+                                <p id="resumo-roi-realista" class="text-3xl font-bold text-yellow-900">2400,0%</p>
+                            </div>
                         </div>
                     </div>
-                     <p class="text-xs text-gray-500 mt-4 pt-4 border-t border-gray-200" id="explainer-realista">
+                     <p class="text-sm font-medium text-yellow-800/90 mt-6 pt-4 border-t border-yellow-300/50" id="explainer-realista">
                         Para cada R$1,00 investido, a empresa obtém R$24,00 de lucro.
                     </p>
                 </div>
+
                 <!-- Card Otimista -->
-                <div class="p-6 rounded-2xl shadow-lg border-t-4 border-green-500 bg-white flex flex-col">
-                    <h3 class="text-lg font-bold text-green-800 mb-4">Cenário Otimista</h3>
-                    <div class="space-y-4 flex-grow">
-                        <div>
-                            <p class="text-sm text-gray-600">Faturamento Bruto</p>
-                            <p id="resumo-faturamento-otimista" class="text-3xl font-bold text-gray-900">R$ 135.000,00</p>
+                 <div class="transform hover:-translate-y-2 transition-transform duration-300 p-6 rounded-2xl shadow-xl bg-gradient-to-br from-green-100 to-green-50 flex flex-col">
+                    <h3 class="text-xl font-bold text-green-900 mb-6">Cenário Otimista</h3>
+                    <div class="space-y-6 flex-grow">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-green-200 mr-4">
+                                <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01M12 6v-1m0-1V4m0 2v1m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M12 18c-1.657 0-3-.895-3-2s1.343-2 3-2 3-.895 3-2-1.343-2-3-2m0 8v1m0 1v1m0-1c1.11 0 2.08.402 2.599 1"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-sm text-green-800 font-medium">Faturamento Bruto</p>
+                                <p id="resumo-faturamento-otimista" class="text-3xl font-bold text-green-900">R$ 135.000,00</p>
+                            </div>
                         </div>
-                        <div>
-                            <p class="text-sm text-gray-600">ROI</p>
-                            <p id="resumo-roi-otimista" class="text-3xl font-bold text-gray-900">4400,0%</p>
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-green-200 mr-4">
+                                 <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                            </div>
+                            <div>
+                                <p class="text-sm text-green-800 font-medium">ROI</p>
+                                <p id="resumo-roi-otimista" class="text-3xl font-bold text-green-900">4400,0%</p>
+                            </div>
                         </div>
                     </div>
-                     <p class="text-xs text-gray-500 mt-4 pt-4 border-t border-gray-200" id="explainer-otimista">
+                     <p class="text-sm font-medium text-green-800/90 mt-6 pt-4 border-t border-green-300/50" id="explainer-otimista">
                         Para cada R$1,00 investido, a empresa obtém R$44,00 de lucro.
                     </p>
                 </div>
