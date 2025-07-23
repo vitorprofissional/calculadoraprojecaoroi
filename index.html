@@ -62,12 +62,12 @@
         </div>
 
         <!-- Tabela de Projeção -->
-        <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+        <div class="bg-white rounded-2xl shadow-md">
             <div class="p-6">
-                 <h2 class="text-2xl font-semibold text-gray-800">Projeção</h2>
+                 <h2 class="text-2xl font-semibold text-gray-800">Detalhes da Projeção</h2>
             </div>
             <div class="overflow-x-auto">
-                <table class="w-full min-w-full text-sm text-left text-gray-600">
+                <table class="w-full text-sm text-left text-gray-600">
                     <thead class="bg-gray-800 text-white uppercase tracking-wider">
                         <tr>
                             <th scope="col" class="px-6 py-3 rounded-tl-lg">Cenários</th>
@@ -76,55 +76,105 @@
                             <th scope="col" class="px-6 py-3">Volume de Oportunidades</th>
                             <th scope="col" class="px-6 py-3">Taxa de Conversão Vendedor</th>
                             <th scope="col" class="px-6 py-3">Volume de Vendas Fechadas</th>
-                            <th scope="col" class="px-6 py-3">Valor do Contrato (Ticket Médio)</th>
-                            <th scope="col" class="px-6 py-3 bg-indigo-600">Faturamento Bruto</th>
-                            <th scope="col" class="px-6 py-3 bg-indigo-600 rounded-tr-lg">ROI</th>
+                            <th scope="col" class="px-6 py-3 rounded-tr-lg">Valor do Contrato</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-200">
                         <!-- Cenário Pessimista -->
-                        <tr id="cenario-pessimista" class="bg-red-50 hover:bg-red-100 transition-colors duration-200">
+                        <tr class="hover:bg-red-50 transition-colors duration-200">
                             <td class="px-6 py-4 font-semibold text-red-800">Pessimista</td>
-                            <td class="px-6 py-4"><input type="number" id="custo-pessimista" value="30" class="w-24 p-1 border rounded bg-white"></td>
+                            <td class="px-6 py-4"><input type="number" id="custo-pessimista" value="30" class="w-24 p-1 border rounded bg-white text-center"></td>
                             <td class="px-6 py-4 font-medium" id="invest-pessimista">R$ 3.000,00</td>
                             <td class="px-6 py-4" id="oportunidades-pessimista">100</td>
                             <td class="px-6 py-4" id="conversao-pessimista">3,0%</td>
                             <td class="px-6 py-4 font-bold" id="vendas-pessimista">3,0</td>
                             <td class="px-6 py-4" id="ticket-pessimista">R$ 15.000,00</td>
-                            <td class="px-6 py-4 font-bold text-lg text-red-900" id="faturamento-pessimista">R$ 45.000,00</td>
-                            <td class="px-6 py-4 font-bold text-lg text-red-900" id="roi-pessimista">1400%</td>
                         </tr>
                         <!-- Cenário Realista -->
-                        <tr id="cenario-realista" class="bg-yellow-50 hover:bg-yellow-100 transition-colors duration-200">
+                        <tr class="hover:bg-yellow-50 transition-colors duration-200">
                             <td class="px-6 py-4 font-semibold text-yellow-800">Realista</td>
-                            <td class="px-6 py-4"><input type="number" id="custo-realista" value="18" class="w-24 p-1 border rounded bg-white"></td>
+                            <td class="px-6 py-4"><input type="number" id="custo-realista" value="18" class="w-24 p-1 border rounded bg-white text-center"></td>
                             <td class="px-6 py-4 font-medium" id="invest-realista">R$ 3.000,00</td>
                             <td class="px-6 py-4" id="oportunidades-realista">167</td>
                             <td class="px-6 py-4" id="conversao-realista">3,0%</td>
                             <td class="px-6 py-4 font-bold" id="vendas-realista">5,0</td>
                             <td class="px-6 py-4" id="ticket-realista">R$ 15.000,00</td>
-                            <td class="px-6 py-4 font-bold text-lg text-yellow-900" id="faturamento-realista">R$ 75.000,00</td>
-                            <td class="px-6 py-4 font-bold text-lg text-yellow-900" id="roi-realista">2400%</td>
                         </tr>
                         <!-- Cenário Otimista -->
-                        <tr id="cenario-otimista" class="bg-green-50 hover:bg-green-100 transition-colors duration-200">
+                        <tr class="hover:bg-green-50 transition-colors duration-200">
                             <td class="px-6 py-4 font-semibold text-green-800">Otimista</td>
-                            <td class="px-6 py-4"><input type="number" id="custo-otimista" value="10" class="w-24 p-1 border rounded bg-white"></td>
+                            <td class="px-6 py-4"><input type="number" id="custo-otimista" value="10" class="w-24 p-1 border rounded bg-white text-center"></td>
                             <td class="px-6 py-4 font-medium" id="invest-otimista">R$ 3.000,00</td>
                             <td class="px-6 py-4" id="oportunidades-otimista">300</td>
                             <td class="px-6 py-4" id="conversao-otimista">3,0%</td>
                             <td class="px-6 py-4 font-bold" id="vendas-otimista">9,0</td>
                             <td class="px-6 py-4" id="ticket-otimista">R$ 15.000,00</td>
-                            <td class="px-6 py-4 font-bold text-lg text-green-900" id="faturamento-otimista">R$ 135.000,00</td>
-                            <td class="px-6 py-4 font-bold text-lg text-green-900" id="roi-otimista">4400%</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
+        <!-- Seção de Resumo dos Resultados -->
+        <div class="mt-10">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Resumo dos Resultados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card Pessimista -->
+                <div class="p-6 rounded-2xl shadow-lg border-t-4 border-red-500 bg-white flex flex-col">
+                    <h3 class="text-lg font-bold text-red-800 mb-4">Cenário Pessimista</h3>
+                    <div class="space-y-4 flex-grow">
+                        <div>
+                            <p class="text-sm text-gray-600">Faturamento Bruto</p>
+                            <p id="resumo-faturamento-pessimista" class="text-3xl font-bold text-gray-900">R$ 45.000,00</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">ROI</p>
+                            <p id="resumo-roi-pessimista" class="text-3xl font-bold text-gray-900">1400,0%</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-4 pt-4 border-t border-gray-200" id="explainer-pessimista">
+                        Para cada R$1,00 investido, a empresa obtém R$14,00 de lucro.
+                    </p>
+                </div>
+                <!-- Card Realista -->
+                <div class="p-6 rounded-2xl shadow-lg border-t-4 border-yellow-500 bg-white flex flex-col">
+                    <h3 class="text-lg font-bold text-yellow-800 mb-4">Cenário Realista</h3>
+                    <div class="space-y-4 flex-grow">
+                        <div>
+                            <p class="text-sm text-gray-600">Faturamento Bruto</p>
+                            <p id="resumo-faturamento-realista" class="text-3xl font-bold text-gray-900">R$ 75.000,00</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">ROI</p>
+                            <p id="resumo-roi-realista" class="text-3xl font-bold text-gray-900">2400,0%</p>
+                        </div>
+                    </div>
+                     <p class="text-xs text-gray-500 mt-4 pt-4 border-t border-gray-200" id="explainer-realista">
+                        Para cada R$1,00 investido, a empresa obtém R$24,00 de lucro.
+                    </p>
+                </div>
+                <!-- Card Otimista -->
+                <div class="p-6 rounded-2xl shadow-lg border-t-4 border-green-500 bg-white flex flex-col">
+                    <h3 class="text-lg font-bold text-green-800 mb-4">Cenário Otimista</h3>
+                    <div class="space-y-4 flex-grow">
+                        <div>
+                            <p class="text-sm text-gray-600">Faturamento Bruto</p>
+                            <p id="resumo-faturamento-otimista" class="text-3xl font-bold text-gray-900">R$ 135.000,00</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600">ROI</p>
+                            <p id="resumo-roi-otimista" class="text-3xl font-bold text-gray-900">4400,0%</p>
+                        </div>
+                    </div>
+                     <p class="text-xs text-gray-500 mt-4 pt-4 border-t border-gray-200" id="explainer-otimista">
+                        Para cada R$1,00 investido, a empresa obtém R$44,00 de lucro.
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <!-- Seção de Observações -->
-        <div class="mt-8 bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-6 rounded-r-lg">
+        <div class="mt-10 bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-6 rounded-r-lg">
             <h3 class="text-xl font-semibold mb-2">Observações</h3>
             <p class="text-sm">A projeção feita é considerando métricas conservadoras de mercado. Visto que as plataformas de anúncios do Meta e Google variam seus custos de acordo com a competitividade do leilão, esses número podem ser influenciados por diversas variáveis (volume de concorrentes no leilão, volume de concorrentes por região, estrutura e conteúdos das páginas que iremos anunciar, dentre outros).</p>
             <p class="text-sm mt-2">A projeção mais acertiva é dada pelos dados que colhermos através da campanha feita para sua empresa, por isso após o primeiro mês de trabalho, teremos dados mais concretos para uma projeção realista.</p>
@@ -140,6 +190,14 @@
                 currency: 'BRL'
             }).format(value);
         };
+        
+        // Função para formatar o lucro por real investido
+        const formatCurrencyNoSymbol = (value) => {
+             return new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+            }).format(value).replace('R$', '').trim();
+        }
 
         // Função para formatar números como porcentagem
         const formatPercent = (value) => {
@@ -181,16 +239,25 @@
                 const volumeOportunidades = scenario.custo > 0 ? investimento / scenario.custo : 0;
                 const volumeVendas = volumeOportunidades * taxaConversao;
                 const faturamento = volumeVendas * ticketMedio;
-                const roi = investimento > 0 ? (faturamento - investimento) / investimento : 0;
+                const lucro = faturamento - investimento;
+                const roiDecimal = investimento > 0 ? lucro / investimento : 0;
 
                 // Atualizar a interface (UI)
+                // Tabela de detalhes
                 document.getElementById(`invest-${scenario.id}`).textContent = formatCurrency(investimento);
                 document.getElementById(`oportunidades-${scenario.id}`).textContent = Math.round(volumeOportunidades);
                 document.getElementById(`conversao-${scenario.id}`).textContent = formatPercent(taxaConversao);
                 document.getElementById(`vendas-${scenario.id}`).textContent = formatDecimal(volumeVendas);
                 document.getElementById(`ticket-${scenario.id}`).textContent = formatCurrency(ticketMedio);
-                document.getElementById(`faturamento-${scenario.id}`).textContent = formatCurrency(faturamento);
-                document.getElementById(`roi-${scenario.id}`).textContent = formatPercent(roi);
+                
+                // Seção de Resumo dos Resultados
+                document.getElementById(`resumo-faturamento-${scenario.id}`).textContent = formatCurrency(faturamento);
+                document.getElementById(`resumo-roi-${scenario.id}`).textContent = formatPercent(roiDecimal);
+
+                // Atualizar a explicação do ROI
+                const explainerElement = document.getElementById(`explainer-${scenario.id}`);
+                const lucroPorReal = formatCurrency(roiDecimal);
+                explainerElement.textContent = `Para cada R$1,00 investido, a empresa obtém ${lucroPorReal} de lucro.`;
             });
         }
 
